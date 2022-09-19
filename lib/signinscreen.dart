@@ -92,7 +92,7 @@ class _LoginpageState extends State<Loginpage> {
     );
     if (_formkey.currentState!.validate()) {
       FirebaseAuth.instance
-          .signInWithEmailAndPassword(email: username, password: password)
+          .createUserWithEmailAndPassword(email: username, password: password)
           .then((value) {
         setState(() {
           _isLoading = false;
