@@ -14,14 +14,9 @@ class trans extends StatefulWidget {
 
 GoogleTranslator translator = GoogleTranslator();
 
-String text = "hello";
+String text = "friend";
 void translate() {
-  print("hello");
-  translator.translate(text, to: 'hi').then((output) {
-    setstate() {
-      text = output as String;
-    }
-  });
+  translator.translate(text, from: 'en', to: 'es').then((print));
 }
 
 // void setstate(Null Function() param0) {}
@@ -35,8 +30,8 @@ class _transState extends State<trans> {
         title: Text("translator"),
       ),
       body: Container(
-        // height: MediaQuery.of(context).size.height,
-        // width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
         child: Column(
           children: [
             Text(text),

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:myfirst_flutter/homescreen.dart';
 
 import 'package:myfirst_flutter/signinscreen.dart';
+import 'package:myfirst_flutter/transcation.dart';
+
 import 'package:myfirst_flutter/translator.dart';
 
 void main() async {
@@ -13,6 +15,14 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+
+  get date => null;
+
+  get amount => null;
+
+  get id => null;
+
+  get title => null;
 
   // This widget is the root of your application.
   @override
@@ -45,8 +55,10 @@ class MyApp extends StatelessWidget {
       // home: home(),
       // home: signin(),
       // home: home(),
-      home: Loginpage(),
+      // home: Loginpage(),
       // home: trans(),
+      // home: tran(),
+      home: transcation(id: id, title: title, amount: amount, date: date),
     );
   }
 
